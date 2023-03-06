@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+ <body>
+    
+ 
+    <div class= "container">
+        <div class="calculator">
+            
+        <form name = "form">
+            
+           <div class= "calc">
+            
+          <input  type ="text" placeholder="0" name = "answer"> 
+
+          </div>
+          
+         <hr class="line"> <!--horizontal-->
+          <input type="hidden" value="0" name="flag" >
+          
+          
+          <input type = "button" value = "AC" onclick = "form.answer.value = ' ' " class="color">
+          <input type = "button" value = "⌫" onclick = "form.answer.value = form.answer.value.slice(0, -1) " class="col">
+          <input type = "button" value = "%" onclick = "form.answer.value += '%' ;flag.value=0" class="color">
+          <input type = "button" value = "/" onclick = "form.answer.value += '/' ;flag.value=0 " class="color">
+         
+          
+          <br> 
+          
+          <input type = "button" value = "7" onclick = "form.answer.value += '7' ">
+          <input type = "button" value = "8" onclick = "form.answer.value += '8' ">
+          <input type = "button" value = "9" onclick = "form.answer.value += '9' ">
+          <input type = "button" value = "*" onclick = "form.answer.value += '*' ;flag.value=0" class="color" >
+          
+          
+          
+          <br> 
+          
+          <input type = "button" value = "4" onclick = "form.answer.value += '4' ">
+          <input type = "button" value = "5" onclick = "form.answer.value += '5' ">
+          <input type = "button" value = "6" onclick = "form.answer.value += '6' ">
+          <input type = "button" value = "-" onclick = "form.answer.value += '-' ;flag.value=0 " class="col">
+          
+          
+          
+          <br>
+          
+          <input type = "button" value = "1" onclick = "form.answer.value += '1' ">
+          <input type = "button" value = "2" onclick = "form.answer.value += '2' ">
+          <input type = "button" value = "3" onclick = "form.answer.value += '3' ">
+          <input type = "button" value = "+" onclick = "form.answer.value += '+' ;flag.value=0 "  class="color" >
+          
+          
+          <br> 
+            
+          <input type = "button" value = "." onclick = " if(flag.value==0){form.answer.value += '.';flag.value=1;} ">
+          <input type = "button" value = "0" onclick = "form.answer.value += '0' ">  
+          <input type = "button" value = "=" onclick = "form.answer.value = eval(form.answer.value) " class="clear">
+         </form>
+        </div>
+    </div>
+        </body>
